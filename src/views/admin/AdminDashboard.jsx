@@ -11,7 +11,6 @@ import moment from "moment/moment";
 
 export default function AdminDashboard() {
   const {
-    loader,
     totalSale,
     totalOrder,
     totalProduct,

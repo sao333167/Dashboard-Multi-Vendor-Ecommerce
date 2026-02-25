@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Search from "../components/Search";
 import { Link } from "react-router-dom";
-import { FaEdit, FaEye, FaTrashAlt } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import Pagination from "../Pagination";
 import { get_seller_orders } from "../../store/Reducers/orderReducerSlice";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,7 +12,7 @@ export default function Orders() {
 
   const dispatch = useDispatch();
   const [currentPage, setCurrentPage] = useState(1);
-  const [searchValue, setSearchValue] = useState("");
+  const [searchValue, setSearchValue] = useState(""); // value used by Search component
   const [parPage, setParPage] = useState(5);
 
   useEffect(() => {

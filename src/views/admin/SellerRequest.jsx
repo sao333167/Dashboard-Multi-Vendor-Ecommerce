@@ -3,19 +3,18 @@ import { FaEye } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import Pagination from '../Pagination';
 import { useDispatch, useSelector } from "react-redux";
-import toast from "react-hot-toast";
+// toast import removed – not used
 import Search from "../components/Search";
 import { get_seller_request } from '../../store/Reducers/sellerReducerSlice';
 
 export default function SellerRequest() {
     const dispatch = useDispatch();
-    const { loader, successMessage, errorMessage,sellers,totalSeller } = useSelector(
+    const { sellers, totalSeller } = useSelector(
       (state) => state.seller
     );
     const [currentPage, setCurrentPage] = useState(1);
     const [searchValue, setSearchValue] = useState("");
     const [parPage, setParPage] = useState(5);
-    const [show, setShow] = useState(false);
 
       useEffect(() => {
         const obj = {

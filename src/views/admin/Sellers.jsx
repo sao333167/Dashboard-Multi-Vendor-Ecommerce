@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Pagination from "../Pagination";
-import { FaEdit, FaTrashAlt, FaEye } from "react-icons/fa";
+import { FaEye } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
 import { get_active_sellers } from "../../store/Reducers/sellerReducerSlice";
 
@@ -11,7 +11,7 @@ export default function Sellers() {
   const [currentPage, setCurrentPage] = useState(1);
   const [searchVaule, setSearchValue] = useState("");
   const [parPage, setParPage] = useState(5);
-  const [show, setShow] = useState(false);
+  // sidebar toggle state removed; not required here
 
   useEffect(() => {
     const obj = {

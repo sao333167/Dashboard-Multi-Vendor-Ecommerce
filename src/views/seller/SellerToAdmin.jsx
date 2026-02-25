@@ -17,7 +17,7 @@ export default function SellerToAdmin() {
   const scrollRef = useRef();
   const dispatch = useDispatch();
   const [text, setText] = useState("");
-  const [receverMessage, setReceverMessage] = useState("");
+  // receverMessage state removed – not needed here
 
   const send = (e) => {
     e.preventDefault();

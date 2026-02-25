@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { MdCurrencyExchange } from "react-icons/md";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
-import { FaUsers } from "react-icons/fa";
+// FaUsers removed – icon not used
 import { FaCartArrowDown } from "react-icons/fa";
 import Chart from "react-apexcharts";
 import { Link } from "react-router-dom";
@@ -11,7 +11,6 @@ import moment from "moment/moment";
 
 export default function SellerDashboard() {
   const {
-    loader,
     totalSale,
     totalOrder,
     totalProduct,

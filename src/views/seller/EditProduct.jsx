@@ -106,7 +106,7 @@ useEffect(() => {
   if(categories.length > 0) {
     setAllCategory(categories)
   }
-},[categories])
+},[categories, dispatch])
 
 
     const update = (e) => {

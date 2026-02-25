@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Router from "./router/Router";
 import publicRoutes from "./router/routes/publicRoutes";
 import { getRoutes } from "./router/routes";
@@ -9,7 +9,8 @@ function App() {
   const dispatch = useDispatch();
   const { token } = useSelector(state => state.auth);
 
-  const [allRoutes, setAllRoutes] = useState(() => [...publicRoutes, getRoutes()]);
+  // no need to maintain state for routes since they are static
+  const allRoutes = [...publicRoutes, getRoutes()];
 
   useEffect(() => {
     if (token) {

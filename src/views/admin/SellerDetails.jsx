@@ -6,7 +6,7 @@ import { get_seller,seller_status_update,messageClear } from '../../store/Reduce
 
 export default function SellerDetails() {
   const dispatch = useDispatch();
-    const { loader, successMessage, errorMessage,seller } = useSelector((state) => state.seller);
+    const { successMessage, errorMessage, seller } = useSelector((state) => state.seller);
     const {sellerId} = useParams() 
 
     useEffect(() => {

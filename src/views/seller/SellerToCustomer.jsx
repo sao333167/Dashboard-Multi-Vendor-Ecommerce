@@ -71,7 +71,7 @@ export default function SellerToCustomer() {
         if(customerId === receverMessage.senderId && userInfo._id ===  receverMessage.receverId){
             dispatch(updateMessage(receverMessage))
         }else {
-            toast.success(receverMessage.senderName + " " + "Send A Message" )
+            toast.success(`${receverMessage.senderName} Send A Message` )
             dispatch(messageClear())
         }
     } 

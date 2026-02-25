@@ -14,10 +14,7 @@ const outerElementType = forwardRef((props,ref) =>  (
 ))
 
 export default function PaymentRequest() {
-  const [currentPage, setCurrentPage] = useState(1);
-  const [searchVaule, setSearchValue] = useState("");
-  const [parPage, setParPage] = useState(5);
-  const [show, setShow] = useState(false);
+  // pagination/search state removed – not used in current design
 
   const dispatch = useDispatch()
   const {loader,successMessage,errorMessage,pendingWithdraws} = useSelector(state => state.payment)
@@ -64,23 +61,6 @@ export default function PaymentRequest() {
     <div className="px-2 lg:px-7 pt-5">
       <div className="w-full p-4 bg-[#6a5fdf] rounded-md">
         <h2 className="text-xl font-medium pb-5 text-[#d0d2d6]">Withdraw Request</h2>
-        <div className="flex justify-between items-center">
-          <select
-            onChange={(e) => setParPage(parseInt(e.target.value))}
-            className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
-            name=""
-            id=""
-          >
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-          </select>
-          <input
-            className="px-4 py-2 focus:border-indigo-500 outline-none bg-[#6a5fdf] border border-slate-700 rounded-md text-[#d0d2d6]"
-            type="text"
-            placeholder="Search"
-          />
-        </div>
 
         <div className="w-full">
             <div className="w-full overflow-x-auto">
