@@ -1,12 +1,17 @@
-  import io from 'socket.io-client'
-  
-  export const overrideStyle = {
-    display: 'flex',
-    margin: '0 auto',
-    height:'24px',
-    justifyContent:'center',
-    alignItems:'center'
-  }
+import io from "socket.io-client";
 
+export const overrideStyle = {
+  display: "flex",
+  margin: "0 auto",
+  height: "24px",
+  justifyContent: "center",
+  alignItems: "center",
+};
 
-  export const socket = io('http://localhost:5000')
+const SOCKET_URL =
+  process.env.REACT_APP_SOCKET_URL || "http://localhost:5000";
+
+export const socket = io(SOCKET_URL, {
+  transports: ["websocket"], // better for production
+  withCredentials: true,     // if using auth cookies
+});
