@@ -200,7 +200,7 @@ export default function AdminDashboard() {
                         /> :
                         <img
                           className="w-full rounded-full h-full shadow-lg"
-                          src='/images/seller.png'
+                          src={`${window.location.origin}/images/seller.png`}
                           alt=""
                         /> 
                       }

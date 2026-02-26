@@ -197,7 +197,7 @@ export default function ChatSeller() {
                               ) : (
                                 <img
                                   className="w-[38px] h-[38px] border-2 border-white  rounded-full max-w-[38px] p-[3px]"
-                                  src="/images/admin.jpg"
+                                  src={`${window.location.origin}/images/admin.jpg`}
                                   alt="demo"
                                 />
                               )}

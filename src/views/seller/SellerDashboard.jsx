@@ -198,7 +198,7 @@ export default function SellerDashboard() {
                       ) : (
                         <img
                           className="w-full rounded-full h-full shadow-lg"
-                          src="/images/user.png"
+                          src={`${window.location.origin}/images/user.png`}
                           alt=""
                         />
                       )}

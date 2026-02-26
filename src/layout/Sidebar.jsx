@@ -28,7 +28,7 @@ export default function Sidebar({showSidebar,setShowSidebar}) {
           <Link to="/" className="w-[180px] h-[50px]">
             <img
               className="w-full h-full"
-              src="/images/logo.png"
+              src={`${window.location.origin}/images/logo.png`}
               alt="logo"
             />
           </Link>

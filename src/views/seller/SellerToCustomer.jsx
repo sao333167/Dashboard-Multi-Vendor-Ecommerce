@@ -110,7 +110,7 @@ export default function SellerToCustomer() {
                   <div className="relative">
                     <img
                       className="w-[38px] h-[38px] border-white border-2 max-w-[38px] p-[2px] rounded-full"
-                      src="http://localhost:3001/images/admin.jpg"
+                       src={`${window.location.origin}/images/admin.png`}
                       alt="admin"
                     />
                     <div className="w-[10px] h-[10px] bg-green-500 rounded-full absolute right-0 bottom-0"></div>
@@ -134,7 +134,8 @@ export default function SellerToCustomer() {
                   <div className="relative">
                     <img
                       className="w-[45px] h-[45px] border-green-500 border-2 max-w-[45px] p-[2px] rounded-full"
-                      src="http://localhost:3001/images/demo.jpg"
+                       src={`${window.location.origin}/images/demo.jpg`}
+
                       alt="demo"
                     />
                     <div className="w-[10px] h-[10px] bg-green-500 rounded-full absolute right-0 bottom-0"></div>
@@ -166,7 +167,7 @@ export default function SellerToCustomer() {
                             <div>
                               <img
                                 className="w-[38px] h-[38px] border-2 border-white  rounded-full max-w-[38px] p-[3px]"
-                                src="http://localhost:3001/images/demo.jpg"
+                                src={`${window.location.origin}/images/demo.jpg`}
                                 alt="demo"
                               />
                             </div>
